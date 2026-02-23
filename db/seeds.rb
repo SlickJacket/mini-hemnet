@@ -17,14 +17,14 @@ AREAS = [
   "Gamla Stan", "Norrmalm", "Sundbyberg", "Solna"
 ]
 
-EVENT_TYPES = ["view", "save", "inquiry"]
+EVENT_TYPES = [ "view", "save", "inquiry" ]
 
 puts "Creating listings..."
 
 30.times do
   created_at = Faker::Date.between(from: 90.days.ago, to: Date.today)
 
-  sold = [true, false].sample
+  sold = [ true, false ].sample
   date_sold = sold ? Faker::Date.between(from: created_at, to: Date.today) : nil
 
   listing = Listing.create!(
