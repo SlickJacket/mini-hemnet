@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  before_action :set_listing, only: [:show, :update, :destroy, :view, :save_event, :inquiry, :insights]
+  before_action :set_listing, only: [ :show, :update, :destroy, :view, :save_event, :inquiry, :insights ]
 
   # GET /listings
   def index
@@ -69,7 +69,7 @@ class ListingsController < ApplicationController
     views_per_day: result.views_per_day
   }, status: :ok
   end
-  
+
 
 
   private
