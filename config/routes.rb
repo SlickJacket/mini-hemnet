@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       post :view
       post :save_event
       post :inquiry
-      
+
       # Insights endpoints
       get "insights", to: "insights#index"
       get "insights/summary", to: "insights#summary"
