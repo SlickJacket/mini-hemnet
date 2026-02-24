@@ -18,7 +18,7 @@ AREAS = [
   "Gamla Stan", "Norrmalm", "Sundbyberg", "Solna"
 ]
 
-EVENT_TYPES = ["view", "save", "inquiry"]
+EVENT_TYPES = [ "view", "save", "inquiry" ]
 
 UNSPLASH_IMAGES = [
   "https://images.unsplash.com/photo-1723257129578-a41a852d18ce?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -50,7 +50,7 @@ UNSPLASH_IMAGES = [
   "https://plus.unsplash.com/premium_photo-1674676471154-1acce154992d?q=80&w=713&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://plus.unsplash.com/premium_photo-1663126298656-33616be83c32?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1665249934445-1de680641f50?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1613575831056-0acd5da8f085?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1613575831056-0acd5da8f085?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ]
 
 puts "Creating listings..."
@@ -58,7 +58,7 @@ puts "Creating listings..."
 30.times do
   created_at = Faker::Date.between(from: 90.days.ago, to: Date.today)
 
-  sold = [true, false].sample
+  sold = [ true, false ].sample
   date_sold = sold ? Faker::Date.between(from: created_at, to: Date.today) : nil
 
   listing = Listing.create!(
